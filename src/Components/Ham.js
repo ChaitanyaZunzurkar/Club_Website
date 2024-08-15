@@ -12,21 +12,23 @@ const Ham = () => {
         <>
             <div className={Style.hamBtnContainer}>
                 <div className={Style.hamBtn} onClick={toggleHam} >
-                   {!isopen? <Menu color='white'/> : <X color='white'/>}
+                   {!isopen && <Menu color='white'/>}
                 </div>
             </div>
             {isopen && <div className={Style.hamContainer}>
-                <nav >
-                    <ul className={Style.list}>
-                        <li><Link to={"/"} className={Style.active}>Home</Link></li>
-                        <li><Link to={"/about"}>About</Link></li>
-                        <li><Link to={"/achievements"}>Achievements</Link></li>
-                        <li><Link to={"/events"}>Events</Link></li>
-                        <li><Link to={"/resources"}> Resources </Link></li>
-                    </ul>
+                <div className={Style.hamBtn} onClick={toggleHam} >
+                   {isopen && <X color='white'/>}
+                </div>
+                <nav>
+                <ul className={Style.list}>
+                        <li><Link onClick={toggleHam} to={"/"} className={Style.active}>Home</Link></li>
+                        <li><Link onClick={toggleHam} to={"/about"}>About</Link></li>
+                        <li><Link onClick={toggleHam} to={"/achievements"}>Achievements</Link></li>
+                        <li><Link onClick={toggleHam} to={"/events"}>Events</Link></li>
+                        <li><Link onClick={toggleHam} to={"/resources"}> Resources </Link></li>
+                </ul>
                 </nav>
-            </div>}
-            
+            </div>}  
         </>
     )
 }

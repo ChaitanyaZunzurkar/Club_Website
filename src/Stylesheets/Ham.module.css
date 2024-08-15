@@ -8,17 +8,34 @@
   flex-direction: column;
   float: right;
 }
-
-.list {
+.hamContainer{
   height: 100vh;
   width: 100vw;
   position: fixed;
-  top: 11vh;
-  left:0px;
+  top:0;
+  left:0;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.hamContainer > nav {
+  height: 90%;
+  width: 100%;
+}
+.hamContainer > .hamBtn{
+  height: 10%;
+  width:100%;
+  background: rgb(8, 8, 8);
+  align-items: center;
+}
+.list {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background: rgb(8, 8, 8);
-  z-index: 5;
   transition: transform 0.2s;
   border-collapse: collapse;
   padding-bottom: 10%;
